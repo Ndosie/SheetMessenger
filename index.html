@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel to WhatsApp Message</title>
+<link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+<div class="container">
+  <label>Upload Excel File:</label>
+  <input type="file" id="excelFile" accept=".xlsx, .xls" />
+
+  <label>Select Emoji for Partial Payment:</label>
+  <input type="text" id="partialEmoji" placeholder="Click to select emoji" />
+
+  <label>Select Emoji for Fully Paid:</label>
+  <input type="text" id="fullEmoji" placeholder="Click to select emoji" />
+
+  <button onclick="generateMessages()">Generate Messages</button>
+
+  <label>Generated Messages:</label>
+  <textarea id="output" readonly></textarea>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script src="./scripts/script.js"></script>
+</body>
+</html>

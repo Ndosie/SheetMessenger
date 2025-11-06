@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+.container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+input, button, textarea { margin: 10px 0; width: 100%; padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc; }
+button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+button:hover { background-color: #0056b3; }
+textarea { height: 200px; resize: none; }
+label { font-weight: bold; display: block; margin-top: 15px; }
