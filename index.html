@@ -3,19 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excel to WhatsApp Message</title>
+<title>Sheet Messenger</title>
 <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
 <div class="container">
+  <h2>Sheet to WhatsApp Message</h2>
+  <label>Enter the link of the sheet:</label>
+  <input type="text" id="excelLink"/>
+
+  <p>OR</p>
+
   <label>Upload Excel File:</label>
   <input type="file" id="excelFile" accept=".xlsx, .xls" />
 
-  <label>Select Emoji for Partial Payment:</label>
-  <input type="text" id="partialEmoji" placeholder="Click to select emoji" />
+  <label>Select Emoji for Expected Payment:</label>
+  <div id="expectedEmojiDisplay" class="emoji-display" onclick="openPicker('expected')">🅰️</div>
 
-  <label>Select Emoji for Fully Paid:</label>
-  <input type="text" id="fullEmoji" placeholder="Click to select emoji" />
+  <label>Select Emoji for Partial Payment:</label>
+  <div id="partialEmojiDisplay" class="emoji-display" onclick="openPicker('partial')">☑️</div>
+
+  <label>Select Emoji for Fully Payment:</label>
+  <div id="fullEmojiDisplay" class="emoji-display" onclick="openPicker('full')">✅</div>
+
+  <div id="emojiPicker" class="emoji-picker"></div>
 
   <button onclick="generateMessages()">Generate Messages</button>
 
