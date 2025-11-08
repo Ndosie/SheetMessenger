@@ -6,7 +6,7 @@ A small browser utility that reads an Excel file and generates per-row messages 
 ![Demo](SheetMessenger.gif)
 
 
-![Live Demo](https://ndosie.github.io/SheetMessenger/) - See it in action
+[Live Demo](https://ndosie.github.io/SheetMessenger/) - See it in action
 
 ## Features
 
