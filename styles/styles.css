@@ -48,7 +48,7 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 button:hover {
   background-color: #128c7e;

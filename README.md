@@ -1,7 +1,7 @@
 # SheetMessenger
 
 A small browser utility that reads an Excel data into clean, ready-to-send WhatsApp message. It includes an emoji picker so you can annotate "expected", "partial" and "full" payment statuses with emojis and one-click Copy or Share button.
-Perfect for payment reminders, contribution lists, attendance, savings groups, school fees, SACCOs, NGOs, churches, and business records.
+Perfect for payment reminders, wedding contribution reminders, attendance, savings groups, school fees, SACCOs, NGOs, churches, and business records.
 
 ## Demo
 ![Demo](SheetMessenger.gif)
