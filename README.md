@@ -41,12 +41,12 @@ The script expects the first worksheet to contain rows with these columns (in or
 
 1. `sn` (serial number) — column A
 2. `name` — column B
-3. `amountToBePaid` — column C
+3. `amountToPay` — column C
 4. `amountPaid` — column D (optional / empty if nothing paid yet)
 
 There are two common ways this is handled in the code:
 
-- If the code uses `XLSX.utils.sheet_to_json(firstSheet, { header: ["sn","name","amountToBePaid","amountPaid"], defval: "" })`, the header option forces those property names and every row is returned as an object with those keys. In this mode the **first row is treated as data**, not a header row, so the code often skips index 0 to ignore a real header row.
+- If the code uses `XLSX.utils.sheet_to_json(firstSheet, { header: ["sn","name","amountToPay","amountPaid"], defval: "" })`, the header option forces those property names and every row is returned as an object with those keys. In this mode the **first row is treated as data**, not a header row, so the code often skips index 0 to ignore a real header row.
 
 - If you prefer to let the first row act as headers, call `sheet_to_json` without a `header` array (or with `header: 1` to return arrays), and adjust the parsing accordingly.
 
@@ -64,7 +64,7 @@ If your sheet has a header row (i.e., column labels in row 1), either:
 
 ## Contributing / Next steps
 
+- Add icons which are compatible with WhatsApp
 - Enable users to use different formats for columns
 - Add automated tests for the parsing logic (node script that uses `xlsx` to parse sample files).
-- Add a small UI indicator while parsing large files.
 - Improve error messages for corrupt or unsupported workbooks.

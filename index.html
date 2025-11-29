@@ -9,6 +9,15 @@
 <body>
 <div class="container">
   <h2>Sheet to WhatsApp Message</h2>
+  <div>
+    <p>The script expects the first worksheet to contain rows with these columns (in order):</p>
+    <ol>
+      <li><code>sn</code> (serial number) — column A</li>
+      <li><code>name</code> — column B</li>
+      <li><code>amountToPay</code> — column C</li>
+      <li><code>amountPaid</code> — column D (optional / empty if nothing paid yet)</li>
+    </ol>
+  </div>
   <label>Upload Excel File:</label>
   <input type="file" id="excelFile" accept=".xlsx, .xls" />
 
@@ -23,10 +32,15 @@
 
   <div id="emojiPicker" class="emoji-picker"></div>
 
-  <button onclick="generateMessages()">Generate Messages</button>
+  <button onclick="generateMessage()" id="generate-btn">Generate Message</button>
+  <div id="loading">
+    <span id="spinner"></span> Generating message, please wait…
+  </div>
 
-  <label>Generated Messages:</label>
+  <label>Generated Message:</label>
   <textarea id="output" readonly></textarea>
+  <button class="btn copy-btn" onclick="copyText()">Copy</button>
+  <button class="btn share-btn" onclick="shareText()">Share</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
